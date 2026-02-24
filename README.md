@@ -13,7 +13,7 @@ This independent project leverages machine learning to analyze and predict web s
 ---
 
 ## Project Overview
-
+<img width="588" alt="image" src="https://github.com/user-attachments/assets/cfc610b3-64ae-4a8d-a691-60f74282ccc4">
 - **Objective:** Predict web series ratings using metadata, viewer engagement, and tags.  
 - **Goal:** Facilitate data-driven decisions for content production and streaming platforms.
 
@@ -74,51 +74,37 @@ This independent project leverages machine learning to analyze and predict web s
 
 *Visualizations are included in the Jupyter Notebook.*
 
+
+
+## Model Performance
+
+| Dataset | RMSE  | MAE   | R²    |
+|---------|-------|-------|-------|
+| Train   | 0.583 | 0.473 | 0.512 |
+| Test    | 0.578 | 0.471 | 0.501 |
+
+**Insights:**
+
+- The model generalizes well to unseen data.
+- Viewer engagement metrics (`watched`, `votes`) are strong predictors.
+- Linear Regression provides interpretable relationships between features and ratings.
+
 ---
 
-## Model Building
+## Findings & Insights
 
-```python
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+- Ratings are mostly influenced by **votes, watched counts, and series duration**.
+- Genre tags and production studios have **marginal effects**.
+- Ensemble models or advanced regression techniques could further improve predictions.
+- Visualizations and correlation analysis help content creators **optimize content strategy**.
 
-# Load and preprocess dataset
-dataset = pd.read_csv("anime_data.csv")
-X = pd.get_dummies(dataset.drop(['rating'], axis=1), drop_first=True)
-Y = dataset['rating']
+---
 
-# Train-test split
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
+## How to Use
 
-# Linear Regression Model
-lin_model = LinearRegression()
-lin_model.fit(X_train, Y_train)
-
-# Evaluation Function
-def evaluate_model(model, X, Y):
-    pred = model.predict(X)
-    rmse = mean_squared_error(Y, pred, squared=False)
-    mae = mean_absolute_error(Y, pred)
-    r2 = r2_score(Y, pred)
-    return rmse, mae, r2
-
-train_metrics = evaluate_model(lin_model, X_train, Y_train)
-test_metrics = evaluate_model(lin_model, X_test, Y_test)
+1. **Clone the repository:**
+```bash
+git clone https://github.com/RikzahK/Web-Series-Rating-Prediction-Machine-Learning-Project.git
 
 
 
-
-
-# Web-Series-Rating-Prediction
-The Web Series Rating Prediction project leverages machine learning techniques to analyze and predict the ratings of various web series based on user preferences and metadata. With the surge in streaming platforms, understanding viewer sentiment and ratings can help content creators tailor their offerings more effectively. This project aims to provide accurate rating predictions, facilitating better decision-making for both viewers and producers.
-
-
-# Key Features:
-Data Analysis: Comprehensive exploration of web series data, identifying trends and patterns.
-Machine Learning Models: Implementation of various algorithms to predict ratings effectively.
-User Interface: A simple interface for users to input parameters and receive predictions.
-Visualizations: Graphical representations of data to facilitate easy comprehension of insights.
-
-<img width="588" alt="image" src="https://github.com/user-attachments/assets/cfc610b3-64ae-4a8d-a691-60f74282ccc4">
