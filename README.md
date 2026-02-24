@@ -9,7 +9,9 @@
 **Predicting Web Series Ratings Using Machine Learning Techniques**
 
 This independent project leverages machine learning to analyze and predict web series ratings based on user engagement metrics, metadata, and content tags. It is designed to provide actionable insights for content creators, streaming platforms, and viewers, improving decision-making and personalization.
--
+
+
+
 <img width="588" alt="image" src="https://github.com/user-attachments/assets/cfc610b3-64ae-4a8d-a691-60f74282ccc4">
 
 ---
