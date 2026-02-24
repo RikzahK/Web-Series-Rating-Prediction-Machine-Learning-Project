@@ -14,6 +14,7 @@ This independent project leverages machine learning to analyze and predict web s
 
 ## Project Overview
 <img width="588" alt="image" src="https://github.com/user-attachments/assets/cfc610b3-64ae-4a8d-a691-60f74282ccc4">
+
 - **Objective:** Predict web series ratings using metadata, viewer engagement, and tags.  
 - **Goal:** Facilitate data-driven decisions for content production and streaming platforms.
 
