@@ -29,11 +29,27 @@ This independent project leverages machine learning to analyze and predict web s
 
 ---
 
-## Dataset
+## Data Exploration
 
-- **File:** `anime_data.csv`  
-- **Columns:** `title, description, mediaType, eps, duration, ongoing, seasonOfRelease, years_running, studio_primary, studios_colab, tags, rating, votes, watched, watching, wantWatch, dropped` (44 total)  
-- Includes metadata, viewer engagement, and tag-based features.
+**Dataset:** `anime_data.csv`  
+**Features:** Title, Description, Media Type, Episodes, Duration, Studio, Tags, Viewer Engagement (`watched`, `watching`, `wantWatch`, `dropped`), Ratings, Votes, etc.
+
+**Preview of the Dataset:**
+
+| title | mediaType | eps | duration | ongoing | years_running | studio_primary | rating | votes |
+|-------|-----------|-----|---------|--------|---------------|----------------|-------|-------|
+| Fullmetal Alchemist: Brotherhood | TV | 64 | 1750 | False | 1 | Bones | 9.2 | 58831 |
+| Your Name | Movie | 1 | 107 | False | 1 | CoMix Wave Films | 8.9 | 45892 |
+
+**Exploratory Analysis:**  
+
+- **Univariate Analysis** on `duration`
+<img width="1014" height="602" alt="image" src="https://github.com/user-attachments/assets/7d049fce-376f-4f48-a99d-c896216eb5ee" />
+
+
+- **Correlation Analysis** between numeric features:
+
+<img width="1261" height="672" alt="image" src="https://github.com/user-attachments/assets/dc0332cb-1969-4d80-b691-8dfed5258c2b" />
 
 ---
 
