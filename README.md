@@ -12,7 +12,7 @@ This independent project leverages machine learning to analyze and predict web s
 
 
 
-<img width="588" alt="image" src="https://github.com/user-attachments/assets/cfc610b3-64ae-4a8d-a691-60f74282ccc4">
+<img width="100%" alt="image" src="https://github.com/user-attachments/assets/cfc610b3-64ae-4a8d-a691-60f74282ccc4">
 
 ---
 
